@@ -1,27 +1,19 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, View } from 'react-native';
+import Login from './app/Login';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Mobile Development</Text>
+      {/* <Text>Mobile Development</Text> */}
+      <Login />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
-    paddingHorizontal: 24,
+    paddingHorizontal: 20,
   },
 });
 
