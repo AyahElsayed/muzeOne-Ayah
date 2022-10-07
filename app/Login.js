@@ -18,7 +18,7 @@ const Login = () => {
       </View>
       {/* content */}
       <View style={styles.content}>
-        <View>
+        <View style={{ marginBottom: DeviceHeightRatio * 140 }}>
           {/* login info */}
           <View style={styles.loginInfoContainer}>
             <Text style={styles.loginInfo}>
@@ -43,7 +43,7 @@ const Login = () => {
           </Pressable>
         </View>
       </View>
-    </View>
+    </View >
   );
 };
 
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   content: {
     // height: '100%',
-    flex: 1
+    // flex: 1,
   },
   loginInfo: {
     fontSize: 30,
@@ -106,10 +106,10 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   createAccountBtnContainer: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
+    // position: 'absolute',
+    // left: 0,
+    // right: 0,
+    // bottom: 0,
     marginBottom: 31 * DeviceHeightRatio,
   },
   createAccountBtn: {
