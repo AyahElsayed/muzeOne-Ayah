@@ -5,7 +5,7 @@ import { Dimensions } from 'react-native';
 const screenHeight = Dimensions.get('window').height; //689
 const DeviceHeightRatio = screenHeight / 812
 
-const Login = () => {
+const Login = ({ navigation }) => {
 
   return (
     <View style={styles.loginContainer}>
@@ -38,7 +38,10 @@ const Login = () => {
           </View>
         </View>
         <View style={styles.createAccountBtnContainer}>
-          <Pressable style={styles.createAccountBtn}>
+          <Pressable style={styles.createAccountBtn}
+            onPress={() =>
+              navigation.navigate('CreateAccount')
+            }>
             <Text style={styles.createAccountTitle}>create account </Text>
           </Pressable>
         </View>
@@ -128,7 +131,8 @@ const styles = StyleSheet.create({
     color: '#C49380',
   },
   loginContainer: {
-    height: '100%'
+    height: '100%',
+    paddingHorizontal: 20,
   }
 });
 export default Login;

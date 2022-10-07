@@ -1,20 +1,27 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 import Login from './app/Login';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CreateAccount from './app/CreateAccount';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      {/* <Text>Mobile Development</Text> */}
-      <Login />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator >
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CreateAccount"
+          component={CreateAccount}
+          options={{ title: 'Create Account' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 20,
-  },
-});
 
 export default App;
