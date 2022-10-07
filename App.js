@@ -9,7 +9,18 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator >
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#fff',
+          },
+          headerTintColor: '#292D32',
+          headerTitleStyle: {
+            fontWeight: '500',
+          },
+          headerShadowVisible: false,
+        }}
+      >
         <Stack.Screen
           name="Login"
           component={Login}
@@ -18,7 +29,9 @@ const App = () => {
         <Stack.Screen
           name="CreateAccount"
           component={CreateAccount}
-          options={{ title: 'Create Account' }} />
+          options={{ title: 'Create Account' }}
+
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
